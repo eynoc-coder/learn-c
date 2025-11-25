@@ -1,19 +1,19 @@
 #include <stdio.h>
 
 
-int pgcd(int m, int n) {
+int gcd(int m, int n) {
 
   if (m == 0  || n == 0) {
     return m > n ? m : n;
   }
   if (m < n) {
-    return pgcd(n, m);
+    return gcd(n, m);
   }
   int remainder = m % n;
   if (remainder == 0) {
     return n;
   } else {
-    return pgcd(n, remainder);
+    return gcd(n, remainder);
   }
 }
 
@@ -37,7 +37,7 @@ int main(void) {
     return -1;
   }
 
-  result =  pgcd(m, n);
+  result =  gcd(m, n);
 
   printf("The greatest common divisor of m and n is : %i\n", result);
 
