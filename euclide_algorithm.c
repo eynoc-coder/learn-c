@@ -2,6 +2,10 @@
 
 
 int pgcd(int m, int n) {
+
+  if (m == 0  || n == 0) {
+    return m > n ? m : n;
+  }
   if (m < n) {
     return pgcd(n, m);
   }
