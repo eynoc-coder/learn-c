@@ -7,19 +7,18 @@ int main(void)
   float average;
 
   // init grades
-
-  grades[0] = 97;
-  grades[1] = 68;
-  grades[2] = 37;
-  grades[3] = 07;
-  grades[4] = 77;
+  for (int i=0;i < 5; i++) {
+    printf("Enter your %i 'th grade: ", i + 1);
+    scanf("%i", &grades[i]);
+  }
 
   for (int i = 0; i < 5; i++) {
     sum += grades[i];
     printf("Compute grade: %i \n", i);
+    printf("actual sum after computation:  %i\n", sum);
   }
 
-  average = sum/5;
+  average = sum / 5;
   printf("average: %f\n", average);
   return 0;
 }
